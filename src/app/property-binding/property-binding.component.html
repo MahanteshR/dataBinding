@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="display-4">Data Binding with Angular</h1>
+    <hr class="my-4">
+    <h4 class="display-6">Property Binding and Event Binding</h4>
+    <br>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h6 class="card-title">Student Details</h6>
+        <input type="text"
+               class="form-control"
+               (input)="onUpdateStudent($event)"/>
+        <div>
+          <p>{{ studentID }}</p>
+        </div>
+        <button class="btn btn-primary"
+                [disabled]="!addNewStudent"
+                (click)="onAddStudent()">
+          Add new Student
+        </button>
+        <p *ngIf="clicked">{{ status }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
